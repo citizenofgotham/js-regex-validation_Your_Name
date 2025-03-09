@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Soft pastel gradient */
+    background: linear-gradient(135deg, #3D0301, #B03052); /* Dark red to deep pink gradient */
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,10 +12,10 @@ body {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    background: #EBE8DB; /* Soft off-white for the container */
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
     animation: fadeIn 1s ease-in-out;
@@ -35,7 +35,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #555; /* Soft gray for heading */
+    color: #3D0301; /* Dark red for heading */
     font-size: 24px;
     font-weight: bold;
 }
@@ -48,7 +48,7 @@ h1 {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: #555; /* Soft gray for labels */
+    color: #3D0301; /* Dark red for labels */
     font-size: 14px;
     font-weight: 600;
 }
@@ -56,7 +56,7 @@ h1 {
 .form-group input {
     width: 100%;
     padding: 12px;
-    border: 2px solid #ddd;
+    border: 2px solid #D76C82; /* Soft pink border */
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
@@ -64,14 +64,14 @@ h1 {
 }
 
 .form-group input:focus {
-    border-color: #a18cd1; /* Soft purple for focus */
+    border-color: #B03052; /* Deep pink for focus */
     outline: none;
-    box-shadow: 0 0 8px rgba(161, 140, 209, 0.5); /* Matching shadow */
+    box-shadow: 0 0 8px rgba(176, 48, 82, 0.5); /* Matching shadow */
 }
 
 /* Error Message Styles */
 .error {
-    color: #ff6b6b; /* Soft red for errors */
+    color: #B03052; /* Deep pink for errors */
     font-size: 0.9em;
     margin-top: 5px;
     display: block;
@@ -80,12 +80,12 @@ h1 {
 
 /* Invalid Input Styles */
 input:invalid {
-    border-color: #ff6b6b; /* Soft red for invalid inputs */
+    border-color: #B03052; /* Deep pink for invalid inputs */
 }
 
 /* Success Message Styles */
 #successMessage {
-    color: #4cd97b; /* Soft green for success */
+    color: #3D0301; /* Dark red for success */
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
@@ -108,8 +108,8 @@ input:invalid {
 button {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Soft gradient */
-    color: #fff;
+    background: linear-gradient(135deg, #B03052, #D76C82); /* Deep pink to soft pink gradient */
+    color: #EBE8DB; /* Off-white text */
     border: none;
     border-radius: 8px;
     font-size: 16px;
@@ -119,7 +119,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(135deg, #fbc2eb, #a18cd1); /* Reverse gradient on hover */
+    background: linear-gradient(135deg, #D76C82, #B03052); /* Reverse gradient on hover */
     transform: translateY(-2px);
 }
 
