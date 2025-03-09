@@ -5,12 +5,23 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     color: #333;
 }
 
+/* Title Styles */
+h1 {
+    color: #EBE8DB; /* Soft off-white for the title */
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Container Styles */
 .container {
     background: #EBE8DB; /* Soft off-white for the container */
     padding: 30px;
@@ -30,31 +41,6 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Header Styles */
-.header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.header .icon {
-    font-size: 40px;
-    color: #B03052; /* Deep pink for the icon */
-    margin-bottom: 10px;
-}
-
-.header h1 {
-    color: #3D0301; /* Dark red for heading */
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.header p {
-    color: #555; /* Soft gray for subtitle */
-    font-size: 14px;
-    margin: 0;
 }
 
 /* Form Group Styles */
@@ -146,16 +132,12 @@ button:active {
 
 /* Responsive Design */
 @media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
     .container {
         padding: 20px;
-    }
-
-    .header h1 {
-        font-size: 20px;
-    }
-
-    .header p {
-        font-size: 12px;
     }
 
     .form-group input {
