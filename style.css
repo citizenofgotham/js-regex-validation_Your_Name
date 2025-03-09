@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant gradient */
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -64,14 +64,14 @@ h1 {
 }
 
 .form-group input:focus {
-    border-color: #667eea;
+    border-color: #2575fc; /* Bright blue for focus */
     outline: none;
-    box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.5); /* Matching shadow */
 }
 
 /* Error Message Styles */
 .error {
-    color: #ff4d4d;
+    color: #ff4757; /* Vibrant red for errors */
     font-size: 0.9em;
     margin-top: 5px;
     display: block;
@@ -80,12 +80,12 @@ h1 {
 
 /* Invalid Input Styles */
 input:invalid {
-    border-color: #ff4d4d;
+    border-color: #ff4757; /* Matching red for invalid inputs */
 }
 
 /* Success Message Styles */
 #successMessage {
-    color: #28a745;
+    color: #2ed573; /* Vibrant green for success */
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
@@ -108,7 +108,7 @@ input:invalid {
 button {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Matching gradient */
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -119,7 +119,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(135deg, #764ba2, #667eea);
+    background: linear-gradient(135deg, #2575fc, #6a11cb); /* Reverse gradient on hover */
     transform: translateY(-2px);
 }
 
