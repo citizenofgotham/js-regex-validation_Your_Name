@@ -14,7 +14,7 @@ body {
 
 /* Title Styles */
 h1 {
-    color: #EBE8DB; /* Soft off-white for the title */
+    color: #3D0301; /* Deep red for the title */
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -74,7 +74,7 @@ h1 {
 
 /* Error Message Styles */
 .error {
-    color: #B03052; /* Deep pink for errors */
+    color: 	#EE4B2B /* Deep red for errors */
     font-size: 0.9em;
     margin-top: 5px;
     display: block;
