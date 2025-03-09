@@ -21,15 +21,36 @@ function validateForm() {
     }
 }
 
+// Real-time validation for Full Name
+document.getElementById('fullName').addEventListener('input', function () {
+    validateName(this.value);
+});
+
+// Real-time validation for Email
+document.getElementById('email').addEventListener('input', function () {
+    validateEmail(this.value);
+});
+
+// Real-time validation for Phone Number
+document.getElementById('phone').addEventListener('input', function () {
+    validatePhone(this.value);
+});
+
+// Real-time validation for Password
+document.getElementById('password').addEventListener('input', function () {
+    validatePassword(this.value);
+});
+
+// Validation functions
 function validateName(name) {
     const regex = /^[A-Za-z\s]+$/;
     if (!regex.test(name)) {
         document.getElementById('nameError').textContent = 'Invalid name (only alphabetic characters and spaces allowed).';
-        document.getElementById('fullName').style.borderColor = 'red';
+        document.getElementById('fullName').style.borderColor = '#B03052'; // Deep pink for error
         return false;
     } else {
         document.getElementById('nameError').textContent = '';
-        document.getElementById('fullName').style.borderColor = '';
+        document.getElementById('fullName').style.borderColor = '#D76C82'; // Soft pink for valid
         return true;
     }
 }
@@ -38,11 +59,11 @@ function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!regex.test(email)) {
         document.getElementById('emailError').textContent = 'Invalid email address.';
-        document.getElementById('email').style.borderColor = 'red';
+        document.getElementById('email').style.borderColor = '#B03052'; // Deep pink for error
         return false;
     } else {
         document.getElementById('emailError').textContent = '';
-        document.getElementById('email').style.borderColor = '';
+        document.getElementById('email').style.borderColor = '#D76C82'; // Soft pink for valid
         return true;
     }
 }
@@ -51,11 +72,11 @@ function validatePhone(phone) {
     const regex = /^\d{10,15}$/;
     if (!regex.test(phone)) {
         document.getElementById('phoneError').textContent = 'Invalid phone number (10-15 digits only).';
-        document.getElementById('phone').style.borderColor = 'red';
+        document.getElementById('phone').style.borderColor = '#B03052'; // Deep pink for error
         return false;
     } else {
         document.getElementById('phoneError').textContent = '';
-        document.getElementById('phone').style.borderColor = '';
+        document.getElementById('phone').style.borderColor = '#D76C82'; // Soft pink for valid
         return true;
     }
 }
@@ -64,25 +85,11 @@ function validatePassword(password) {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
     if (!regex.test(password)) {
         document.getElementById('passwordError').textContent = 'Password must be at least 8 characters long, with one uppercase letter, one lowercase letter, and one number.';
-        document.getElementById('password').style.borderColor = 'red';
+        document.getElementById('password').style.borderColor = '#B03052'; // Deep pink for error
         return false;
     } else {
         document.getElementById('passwordError').textContent = '';
-        document.getElementById('password').style.borderColor = '';
+        document.getElementById('password').style.borderColor = '#D76C82'; // Soft pink for valid
         return true;
     }
 }
-
-// Real-time validation
-document.getElementById('fullName').addEventListener('input', function () {
-    validateName(this.value);
-});
-document.getElementById('email').addEventListener('input', function () {
-    validateEmail(this.value);
-});
-document.getElementById('phone').addEventListener('input', function () {
-    validatePhone(this.value);
-});
-document.getElementById('password').addEventListener('input', function () {
-    validatePassword(this.value);
-});
