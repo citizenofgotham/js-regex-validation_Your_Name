@@ -32,12 +32,29 @@ body {
     }
 }
 
-h1 {
+/* Header Styles */
+.header {
     text-align: center;
     margin-bottom: 20px;
+}
+
+.header .icon {
+    font-size: 40px;
+    color: #B03052; /* Deep pink for the icon */
+    margin-bottom: 10px;
+}
+
+.header h1 {
     color: #3D0301; /* Dark red for heading */
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #555; /* Soft gray for subtitle */
+    font-size: 14px;
+    margin: 0;
 }
 
 /* Form Group Styles */
@@ -133,8 +150,12 @@ button:active {
         padding: 20px;
     }
 
-    h1 {
+    .header h1 {
         font-size: 20px;
+    }
+
+    .header p {
+        font-size: 12px;
     }
 
     .form-group input {
