@@ -96,16 +96,7 @@ input:invalid {
     animation: slideIn 0.5s ease-in-out;
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 /* Submit Button Styles */
 button {
@@ -130,21 +121,4 @@ button:active {
     transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px;
-    }
 
-    .container {
-        padding: 20px;
-    }
-
-    .form-group input {
-        padding: 10px;
-    }
-
-    button {
-        padding: 10px;
-    }
-}
