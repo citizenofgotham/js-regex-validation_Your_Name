@@ -1,8 +1,10 @@
+// Add event listener for form submission
 document.getElementById('validationForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent form submission
     validateForm();
 });
 
+// Function to validate the entire form
 function validateForm() {
     const fullName = document.getElementById('fullName').value;
     const email = document.getElementById('email').value;
@@ -46,11 +48,11 @@ function validateName(name) {
     const regex = /^[A-Za-z\s]+$/;
     if (!regex.test(name)) {
         document.getElementById('nameError').textContent = 'Invalid name (only alphabetic characters and spaces allowed).';
-        document.getElementById('fullName').style.borderColor = '#B03052'; // Deep pink for error
+        document.getElementById('fullName').classList.add('invalid');
         return false;
     } else {
         document.getElementById('nameError').textContent = '';
-        document.getElementById('fullName').style.borderColor = '#D76C82'; // Soft pink for valid
+        document.getElementById('fullName').classList.remove('invalid');
         return true;
     }
 }
@@ -59,11 +61,11 @@ function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!regex.test(email)) {
         document.getElementById('emailError').textContent = 'Invalid email address.';
-        document.getElementById('email').style.borderColor = '#B03052'; // Deep pink for error
+        document.getElementById('email').classList.add('invalid');
         return false;
     } else {
         document.getElementById('emailError').textContent = '';
-        document.getElementById('email').style.borderColor = '#D76C82'; // Soft pink for valid
+        document.getElementById('email').classList.remove('invalid');
         return true;
     }
 }
@@ -72,11 +74,11 @@ function validatePhone(phone) {
     const regex = /^\d{10,15}$/;
     if (!regex.test(phone)) {
         document.getElementById('phoneError').textContent = 'Invalid phone number (10-15 digits only).';
-        document.getElementById('phone').style.borderColor = '#B03052'; // Deep pink for error
+        document.getElementById('phone').classList.add('invalid');
         return false;
     } else {
         document.getElementById('phoneError').textContent = '';
-        document.getElementById('phone').style.borderColor = '#D76C82'; // Soft pink for valid
+        document.getElementById('phone').classList.remove('invalid');
         return true;
     }
 }
@@ -85,11 +87,11 @@ function validatePassword(password) {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
     if (!regex.test(password)) {
         document.getElementById('passwordError').textContent = 'Password must be at least 8 characters long, with one uppercase letter, one lowercase letter, and one number.';
-        document.getElementById('password').style.borderColor = '#B03052'; // Deep pink for error
+        document.getElementById('password').classList.add('invalid');
         return false;
     } else {
         document.getElementById('passwordError').textContent = '';
-        document.getElementById('password').style.borderColor = '#D76C82'; // Soft pink for valid
+        document.getElementById('password').classList.remove('invalid');
         return true;
     }
 }
