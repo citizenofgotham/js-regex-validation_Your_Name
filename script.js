@@ -1,5 +1,5 @@
 // Get form and input elements
-const form = document.getElementById('validationForm');
+const form = document.getElementById('signupForm');
 const fullNameInput = document.getElementById('fullName');
 const emailInput = document.getElementById('email');
 const phoneInput = document.getElementById('phone');
@@ -13,10 +13,10 @@ const phoneRegex = /^\d{10,15}$/;
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
 // Real-time validation functions
-fullNameInput.addEventListener('input', () => validateField(fullNameInput, nameRegex, 'Full Name must contain only alphabetic characters and spaces.', 'fullNameError'));
-emailInput.addEventListener('input', () => validateField(emailInput, emailRegex, 'Please enter a valid email address.', 'emailError'));
-phoneInput.addEventListener('input', () => validateField(phoneInput, phoneRegex, 'Phone number must contain 10-15 digits.', 'phoneError'));
-passwordInput.addEventListener('input', () => validateField(passwordInput, passwordRegex, 'Password must be at least 8 characters long, including one uppercase letter, one lowercase letter, and one number.', 'passwordError'));
+fullNameInput.addEventListener('input', () => validateField(fullNameInput, nameRegex, 'Invalid name (letters and spaces only)', 'fullNameError'));
+emailInput.addEventListener('input', () => validateField(emailInput, emailRegex, 'Invalid email format', 'emailError'));
+phoneInput.addEventListener('input', () => validateField(phoneInput, phoneRegex, 'Phone must be 10-15 digits', 'phoneError'));
+passwordInput.addEventListener('input', () => validateField(passwordInput, passwordRegex, 'Password must be 8+ characters, include uppercase, lowercase, and number', 'passwordError'));
 
 // Form submission handler
 form.addEventListener('submit', (e) => {
@@ -47,19 +47,19 @@ function validateField(input, regex, errorMessage, errorElementId) {
 function validateForm() {
   let isValid = true;
   if (!nameRegex.test(fullNameInput.value)) {
-    validateField(fullNameInput, nameRegex, 'Full Name must contain only alphabetic characters and spaces.', 'fullNameError');
+    validateField(fullNameInput, nameRegex, 'Invalid name (letters and spaces only)', 'fullNameError');
     isValid = false;
   }
   if (!emailRegex.test(emailInput.value)) {
-    validateField(emailInput, emailRegex, 'Please enter a valid email address.', 'emailError');
+    validateField(emailInput, emailRegex, 'Invalid email format', 'emailError');
     isValid = false;
   }
   if (!phoneRegex.test(phoneInput.value)) {
-    validateField(phoneInput, phoneRegex, 'Phone number must contain 10-15 digits.', 'phoneError');
+    validateField(phoneInput, phoneRegex, 'Phone must be 10-15 digits', 'phoneError');
     isValid = false;
   }
   if (!passwordRegex.test(passwordInput.value)) {
-    validateField(passwordInput, passwordRegex, 'Password must be at least 8 characters long, including one uppercase letter, one lowercase letter, and one number.', 'passwordError');
+    validateField(passwordInput, passwordRegex, 'Password must be 8+ characters, include uppercase, lowercase, and number', 'passwordError');
     isValid = false;
   }
   return isValid;
