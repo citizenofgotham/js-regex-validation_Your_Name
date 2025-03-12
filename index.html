@@ -8,28 +8,37 @@
 </head>
 <body>
     <div class="container">
-        <h2>🔐 Create Your Account</h2>
+        <h2>✨ Account Registration ✨</h2>
         <form id="accountRegistrationForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <span id="usernameError" class="error-message"></span>
+            <div class="input-group">
+                <label for="username">Full Name 🌟</label>
+                <input type="text" id="username" required>
+                <span id="usernameError" class="error"></span>
+            </div>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-            <span id="emailError" class="error-message"></span>
+            <div class="input-group">
+                <label for="email">Email 📧</label>
+                <input type="email" id="email" required>
+                <span id="emailError" class="error"></span>
+            </div>
 
-            <label for="phone">Phone Number:</label>
-            <input type="text" id="phone" name="phone" required>
-            <span id="phoneError" class="error-message"></span>
+            <div class="input-group">
+                <label for="phone">Phone 📞</label>
+                <input type="tel" id="phone" required>
+                <span id="phoneError" class="error"></span>
+            </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <span id="passwordError" class="error-message"></span>
+            <div class="input-group">
+                <label for="password">Password 🔒</label>
+                <input type="password" id="password" required>
+                <span id="passwordError" class="error"></span>
+            </div>
 
-            <button type="submit">🚀 Register</button>
-            <p id="successMessage" class="success-message"></p>
+            <button type="submit">Register 🚀</button>
+            <p id="successMessage"></p>
         </form>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
