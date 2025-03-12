@@ -1,6 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff9ff3, #f368e0);
+    font-family: Arial, sans-serif;
+    background-color: #EBE8DB;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,57 +9,64 @@ body {
 }
 
 .container {
-    background: white;
+    background: #D76C82;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 320px;
 }
 
 h2 {
-    color: #833471;
+    color: #3D0301;
+}
+
+.input-group {
+    margin: 10px 0;
+    text-align: left;
 }
 
 label {
-    display: block;
-    margin-top: 10px;
     font-weight: bold;
+    color: #3D0301;
 }
 
 input {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #B03052;
     border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #3D0301;
+    outline: none;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
 }
 
 button {
-    background: #833471;
-    color: white;
+    background: #3D0301;
+    color: #EBE8DB;
     padding: 10px;
     border: none;
-    border-radius: 5px;
-    margin-top: 15px;
-    cursor: pointer;
     width: 100%;
-    transition: 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
-    background: #6f1e51;
+    background: #B03052;
 }
 
-.error-message {
-    color: red;
-    font-size: 12px;
-    display: block;
-    margin-top: 5px;
-}
-
-.success-message {
-    color: green;
-    font-size: 14px;
+#successMessage {
     margin-top: 10px;
+    color: #3D0301;
+    font-weight: bold;
 }
