@@ -10,17 +10,23 @@ body {
   margin: 0;
 }
 
-.form-container {
-  background-color: #B03052; /* Medium red */
+.container {
+  width: 100%;
+  max-width: 400px;
   padding: 20px;
+  background-color: #B03052; /* Medium red */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 300px;
+}
+
+.form-container {
+  width: 100%;
 }
 
 h1 {
   text-align: center;
   color: #EBE8DB; /* Light beige */
+  margin-bottom: 20px;
 }
 
 .form-group {
@@ -30,6 +36,7 @@ h1 {
 label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 input {
@@ -62,4 +69,19 @@ input:focus {
 /* Highlight invalid fields */
 input.invalid {
   border-color: #FF0000; /* Bright red */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #D76C82; /* Light pink */
+  border: none;
+  border-radius: 5px;
+  color: #EBE8DB; /* Light beige */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #B03052; /* Medium red */
 }
