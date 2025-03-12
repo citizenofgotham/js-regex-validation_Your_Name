@@ -1,124 +1,91 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #3D0301, #B03052); /* Dark red to deep pink gradient */
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #333;
-}
-
-/* Title Styles */
-h1 {
-    color: #3D0301; /* Deep red for the title */
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
+    margin: 0;
 }
 
 /* Container Styles */
 .container {
-    background: #EBE8DB; /* Soft off-white for the container */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
-    animation: fadeIn 1s ease-in-out;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Title Styles */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 /* Form Group Styles */
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
-    color: #3D0301; /* Dark red for labels */
-    font-size: 14px;
-    font-weight: 600;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
 }
 
 .form-group input {
     width: 100%;
-    padding: 12px;
-    border: 2px solid #D76C82; /* Soft pink border */
-    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
     box-sizing: border-box;
-    font-size: 16px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus {
-    border-color: #B03052; /* Deep pink for focus */
+    border-color: #007BFF;
     outline: none;
-    box-shadow: 0 0 8px rgba(176, 48, 82, 0.5); /* Matching shadow */
 }
 
 /* Error Message Styles */
 .error {
-    color: 	#EE4B2B /* Deep red for errors */
+    color: red;
     font-size: 0.9em;
     margin-top: 5px;
     display: block;
-    font-weight: 500;
 }
 
 /* Invalid Input Styles */
-input:invalid {
-    border-color: #B03052; /* Deep pink for invalid inputs */
+input.invalid {
+    border-color: red;
 }
 
 /* Success Message Styles */
-#successMessage {
-    color: #3D0301; /* Dark red for success */
-    font-weight: bold;
+.success {
+    color: green;
+    font-size: 1em;
+    margin-top: 10px;
     text-align: center;
-    margin-top: 20px;
-    font-size: 16px;
-    animation: slideIn 0.5s ease-in-out;
+    font-weight: bold;
 }
-
-
 
 /* Submit Button Styles */
 button {
     width: 100%;
-    padding: 12px;
-    background: linear-gradient(135deg, #B03052, #D76C82); /* Deep pink to soft pink gradient */
-    color: #EBE8DB; /* Off-white text */
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: 16px;
-    font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #D76C82, #B03052); /* Reverse gradient on hover */
-    transform: translateY(-2px);
+    background-color: #0056b3;
 }
-
-button:active {
-    transform: translateY(0);
-}
-
-
