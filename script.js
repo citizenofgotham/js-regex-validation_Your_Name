@@ -1,72 +1,48 @@
-document.getElementById('registrationForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  if (validateForm()) {
-    document.getElementById('successMessage').textContent = 'Form submitted successfully!';
-    document.getElementById('successMessage').style.display = 'block';
-  }
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("accountRegistrationForm");
 
-function validateForm() {
-  let isValid = true;
+    form.addEventListener("input", function (event) {
+        validateInput(event.target);
+    });
 
-  // Full Name Validation
-  const fullName = document.getElementById('fullName').value;
-  const fullNameError = document.getElementById('fullNameError');
-  if (!/^[A-Za-z\s]+$/.test(fullName)) {
-    fullNameError.textContent = 'Full Name should only contain alphabetic characters and spaces.';
-    fullNameError.style.display = 'block';
-    document.getElementById('fullName').classList.add('invalid');
-    isValid = false;
-  } else {
-    fullNameError.style.display = 'none';
-    document.getElementById('fullName').classList.remove('invalid');
-  }
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (validateForm()) {
+            document.getElementById("successMessage").textContent = "🎉 Account successfully registered!";
+            form.reset();
+        }
+    });
 
-  // Email Validation
-  const email = document.getElementById('email').value;
-  const emailError = document.getElementById('emailError');
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    emailError.textContent = 'Please enter a valid email address.';
-    emailError.style.display = 'block';
-    document.getElementById('email').classList.add('invalid');
-    isValid = false;
-  } else {
-    emailError.style.display = 'none';
-    document.getElementById('email').classList.remove('invalid');
-  }
+    function validateInput(input) {
+        let errorSpan = document.getElementById(input.id + "Error");
+        let isValid = false;
 
-  // Phone Number Validation
-  const phone = document.getElementById('phone').value;
-  const phoneError = document.getElementById('phoneError');
-  if (!/^\d{10,15}$/.test(phone)) {
-    phoneError.textContent = 'Phone Number should contain 10-15 digits.';
-    phoneError.style.display = 'block';
-    document.getElementById('phone').classList.add('invalid');
-    isValid = false;
-  } else {
-    phoneError.style.display = 'none';
-    document.getElementById('phone').classList.remove('invalid');
-  }
+        if (input.id === "username") {
+            isValid = /^[A-Za-z\s]+$/.test(input.value);
+            errorSpan.textContent = isValid ? "" : "❌ Only alphabetic characters allowed";
+        } else if (input.id === "email") {
+            isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
+            errorSpan.textContent = isValid ? "" : "❌ Enter a valid email address";
+        } else if (input.id === "phone") {
+            isValid = /^\d{10,15}$/.test(input.value);
+            errorSpan.textContent = isValid ? "" : "❌ Enter a valid phone number (10-15 digits)";
+        } else if (input.id === "password") {
+            isValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(input.value);
+            errorSpan.textContent = isValid ? "" : "❌ Password must be 8+ chars, 1 uppercase, 1 number";
+        }
 
-  // Password Validation
-  const password = document.getElementById('password').value;
-  const passwordError = document.getElementById('passwordError');
-  if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) {
-    passwordError.textContent = 'Password must be at least 8 characters, including one uppercase letter, one lowercase letter, and one number.';
-    passwordError.style.display = 'block';
-    document.getElementById('password').classList.add('invalid');
-    isValid = false;
-  } else {
-    passwordError.style.display = 'none';
-    document.getElementById('password').classList.remove('invalid');
-  }
+        input.style.borderColor = isValid ? "green" : "red";
+        return isValid;
+    }
 
-  return isValid;
-}
-
-// Real-time validation
-document.querySelectorAll('input').forEach(input => {
-  input.addEventListener('input', function () {
-    validateForm();
-  });
+    function validateForm() {
+        let isValid = true;
+        ["username", "email", "phone", "password"].forEach(id => {
+            let input = document.getElementById(id);
+            if (!validateInput(input)) {
+                isValid = false;
+            }
+        });
+        return isValid;
+    }
 });
