@@ -1,3 +1,4 @@
+/* Centering the form properly */
 body {
     font-family: Arial, sans-serif;
     background-color: #EBE8DB;
@@ -10,34 +11,38 @@ body {
 
 .container {
     background: #D76C82;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 320px;
+    width: 350px;
 }
 
 h2 {
     color: #3D0301;
+    margin-bottom: 20px;
+    font-size: 22px;
 }
 
 .input-group {
-    margin: 10px 0;
+    margin-bottom: 15px;
     text-align: left;
 }
 
 label {
     font-weight: bold;
     color: #3D0301;
+    font-size: 14px;
 }
 
 input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
     border: 2px solid #B03052;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
+    background: #EBE8DB;
 }
 
 input:focus {
@@ -48,25 +53,31 @@ input:focus {
 .error {
     color: red;
     font-size: 12px;
+    display: block;
+    margin-top: 5px;
 }
 
 button {
     background: #3D0301;
     color: #EBE8DB;
-    padding: 10px;
+    padding: 12px;
     border: none;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 button:hover {
     background: #B03052;
+    transition: 0.3s ease;
 }
 
 #successMessage {
-    margin-top: 10px;
+    margin-top: 15px;
     color: #3D0301;
     font-weight: bold;
+    font-size: 14px;
 }
