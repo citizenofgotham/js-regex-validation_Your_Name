@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation with RegExp</title>
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
             <!-- Full Name Field -->
             <div class="form-group">
                 <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Name">
+                <input type="text" id="fullName" name="fullName" placeholder="John Doe">
                 <span class="error" id="nameError"></span>
             </div>
 
@@ -34,7 +35,7 @@
             <!-- Password Field -->
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="************">
+                <input type="password" id="password" name="password" placeholder="********">
                 <span class="error" id="passwordError"></span>
             </div>
 
@@ -43,10 +44,10 @@
         </form>
 
         <!-- Success Message -->
-        <p id="successMessage"></p>
+        <p id="successMessage" class="success"></p>
     </div>
 
-    <!-- Link to JavaScript File -->
+    <!-- Link to the external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
