@@ -1,7 +1,7 @@
-/* Centering the form properly */
+/* Apply full-page styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #EBE8DB;
+    background-color: #3D0301;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,75 +9,75 @@ body {
     margin: 0;
 }
 
+/* Centered form container */
 .container {
     background: #D76C82;
-    padding: 25px;
+    padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 350px;
 }
 
+/* Header styling */
 h2 {
     color: #3D0301;
-    margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 24px;
 }
 
+/* Input fields */
 .input-group {
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
     text-align: left;
+    margin-bottom: 15px;
 }
 
-label {
+.input-group label {
     font-weight: bold;
-    color: #3D0301;
-    font-size: 14px;
+    color: #B03052;
+    margin-bottom: 5px;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+.input-group input {
+    padding: 8px;
     border: 2px solid #B03052;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 16px;
-    background: #EBE8DB;
+    transition: border-color 0.3s ease;
 }
 
-input:focus {
+.input-group input:focus {
     border-color: #3D0301;
     outline: none;
 }
 
+/* Error messages */
 .error {
     color: red;
-    font-size: 12px;
-    display: block;
+    font-size: 14px;
     margin-top: 5px;
 }
 
+/* Register button */
 button {
-    background: #3D0301;
-    color: #EBE8DB;
-    padding: 12px;
+    background-color: #B03052;
+    color: white;
     border: none;
-    width: 100%;
-    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #B03052;
-    transition: 0.3s ease;
+    background-color: #3D0301;
 }
 
+/* Success message */
 #successMessage {
-    margin-top: 15px;
-    color: #3D0301;
-    font-weight: bold;
-    font-size: 14px;
+    color: green;
+    font-size: 16px;
+    margin-top: 10px;
 }
