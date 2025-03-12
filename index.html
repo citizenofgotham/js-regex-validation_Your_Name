@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation with RegExp</title>
-    <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Form Validation</h1>
-        <form id="validationForm">
-            <!-- Full Name Field -->
-            <div class="form-group">
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" placeholder="John Doe">
-                <span class="error" id="nameError"></span>
-            </div>
-
-            <!-- Email Field -->
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="email@example.com">
-                <span class="error" id="emailError"></span>
-            </div>
-
-            <!-- Phone Number Field -->
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="text" id="phone" name="phone" placeholder="07123456789">
-                <span class="error" id="phoneError"></span>
-            </div>
-
-            <!-- Password Field -->
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="********">
-                <span class="error" id="passwordError"></span>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit">Submit</button>
-        </form>
-
-        <!-- Success Message -->
-        <p id="successMessage" class="success"></p>
-    </div>
-
-    <!-- Link to the external JavaScript file -->
-    <script src="script.js"></script>
+  <div class="form-container">
+    <h1>Form Validation</h1>
+    <form id="validationForm">
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+        <span class="error-message" id="fullNameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <span class="error-message" id="emailError"></span>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+        <span class="error-message" id="phoneError"></span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <span class="error-message" id="passwordError"></span>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="successMessage" class="success-message"></div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
