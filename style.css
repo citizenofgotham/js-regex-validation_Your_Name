@@ -1,91 +1,65 @@
-/* General Styles */
+/* Apply the color palette */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  background-color: #3D0301; /* Dark red */
+  color: #EBE8DB; /* Light beige */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-/* Container Styles */
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+.form-container {
+  background-color: #B03052; /* Medium red */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
 }
 
-/* Title Styles */
 h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #EBE8DB; /* Light beige */
 }
 
-/* Form Group Styles */
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
+label {
+  display: block;
+  margin-bottom: 5px;
 }
 
-.form-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    box-sizing: border-box;
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #D76C82; /* Light pink */
+  border-radius: 5px;
+  background-color: #EBE8DB; /* Light beige */
+  color: #3D0301; /* Dark red */
 }
 
-.form-group input:focus {
-    border-color: #007BFF;
-    outline: none;
+input:focus {
+  outline: none;
+  border-color: #B03052; /* Medium red */
 }
 
-/* Error Message Styles */
-.error {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
-    display: block;
+.error-message {
+  color: #FF0000; /* Bright red */
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
 }
 
-/* Invalid Input Styles */
+.success-message {
+  color: #00FF00; /* Green */
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Highlight invalid fields */
 input.invalid {
-    border-color: red;
-}
-
-/* Success Message Styles */
-.success {
-    color: green;
-    font-size: 1em;
-    margin-top: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* Submit Button Styles */
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
+  border-color: #FF0000; /* Bright red */
 }
